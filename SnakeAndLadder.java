@@ -39,11 +39,13 @@ public class SnakeAndLadder {
        
         for (int i = 1; i <= num_snakes; i++) {
            
+           	int end_snake;
+            end_snake = scan.nextInt();
+            
             int start_snake;
             start_snake = scan.nextInt();
           
-            int end_snake;
-            end_snake = scan.nextInt();
+            
            
             if (end_snake > size_of_board || end_snake <= 0 || start_snake > size_of_board || start_snake <= 0) {
                 System.out.println("INVALID DATA");
