@@ -1,3 +1,4 @@
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -39,7 +40,7 @@ public class SnakeAndLadder {
        
         for (int i = 1; i <= num_snakes; i++) {
            
-           	int end_snake;
+            int end_snake;
             end_snake = scan.nextInt();
             
             int start_snake;
@@ -124,7 +125,7 @@ public class SnakeAndLadder {
        
         while (true) {
             String name = mp.get(turn);
-            System.out.println("Enter " + name + " turn");
+            System.out.println("\nEnter " + name + " turn");
            
             int num;
             num = scan.nextInt();
@@ -143,6 +144,13 @@ public class SnakeAndLadder {
            
             if (temp > size_of_board) {
                 turn = (turn % num_players) + 1;
+                
+                System.out.println("\nPositions of Players");
+           
+                for (int i = 1; i <= num_players; i++) {
+                    System.out.println(mp.get(i) + " -> " + player_position[i]);
+                }
+                
                 continue;
             }
            
@@ -154,7 +162,7 @@ public class SnakeAndLadder {
                 System.out.print(name + " -- ");
                
                 if (temp > player_position[turn]) {
-                    System.out.println("SNAKE " + player_position[turn] + ", " + temp);
+                    System.out.println("SNAKE " + temp + ", " + player_position[turn]);
                 }
                
                 else if (temp < player_position[turn]) {
@@ -163,7 +171,7 @@ public class SnakeAndLadder {
                
             }
            
-            System.out.println("Positions of Players");
+            System.out.println("\nPositions of Players");
            
             for (int i = 1; i <= num_players; i++) {
                 System.out.println(mp.get(i) + " -> " + player_position[i]);
